@@ -1,0 +1,255 @@
+/* Desktop view */
+@media (min-width: 769px) {
+
+  /* Header container styles */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    /* Spread header elements */
+    align-items: center;
+  }
+
+  /* Left side of the header */
+  .header-info {
+    text-align: center;
+    flex-grow: 1;
+    /* Allow this section to grow and take available space */
+  }
+
+  /* Move header-bar to the left next to header-info */
+  .header-info,
+  .header-bar {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Right side of the header */
+  .header-links {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Move the last two links to the right */
+  .header-links a:last-child {
+    margin-left: 20px;
+    /* Adjust spacing between the last two links */
+  }
+
+  /* Center the last two links vertically */
+  .header-links a {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  /* Adjust spacing between header elements */
+  .header-info a h1 {
+    font-size: 24px;
+    max-width: 200px;
+    margin-right: 10px;
+    /* Add spacing between h1 and h2 */
+  }
+
+  .header-info a h2 {
+    font-size: 16px;
+    max-width: 200px;
+  }
+
+  /* CSS for the search bar */
+  .bar {
+    width: 100%;
+    max-width: 575px;
+    margin: 0 auto;
+    border-radius: 30px;
+    border: 1px solid #dcdcdc;
+  }
+
+  .bar:hover,
+  .bar:focus-within {
+    box-shadow: 1px 1px 8px 1px #dcdcdc;
+  }
+
+  .searchbar {
+    border-radius: 30px;
+    height: 45px;
+    width: 100%;
+    font-size: 16px;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: #282f3a;
+    padding: 0 20px;
+  }
+}
+
+.wrapper {
+  margin-top: 20px;
+  /* Adjust margin as needed */
+  justify-content: center;
+}
+
+/* Reset default styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* CSS for the buttons */
+.buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button {
+  background-color: #f5f5f5;
+  border: none;
+  color: #707070;
+  font-size: 15px;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 4px;
+  outline: none;
+  font-weight: bold;
+}
+
+.button:hover {
+  border: 1px solid #c8c8c8;
+  padding: 9px 19px;
+  color: #808080;
+}
+
+.button:focus {
+  border: 1px solid #4885ed;
+  padding: 9px 19px;
+}
+
+/* Additional mobile responsiveness styles */
+@media (max-width: 768px) {
+  .header {
+    padding: 5px;
+  }
+
+  .header-info {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .header-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bar {
+    max-width: 100%;
+  }
+
+  .searchbar {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .buttons {
+    margin-top: 15px;
+  }
+
+  /* CSS for the search bar */
+  .bar {
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+    border-radius: 30px;
+    border: 1px solid #dcdcdc;
+  }
+
+  .bar:hover,
+  .bar:focus-within {
+    box-shadow: 1px 1px 8px 1px #dcdcdc;
+  }
+
+  .searchbar {
+    border-radius: 30px;
+    height: 45px;
+    width: 100%;
+    font-size: 16px;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: #282f3a;
+    padding: 0 20px;
+  }
+}
+
+/* Inline styles from the HTML */
+.header-info a h1 {
+  font-size: 24px;
+  max-width: 200px;
+}
+
+.header-info a h2 {
+  font-size: 16px;
+  max-width: 200px;
+}
+
+.bar input {
+  padding: 7px 20px;
+  /* Override inline style for input padding */
+}
+
+.header-links a {
+  margin-left: 10px;
+  /* Override inline style for link margin */
+}
+
+/* Styles for the JSON viewer */
+
+.json-key {
+  color: #7e92a2;
+  font-weight: bold;
+}
+
+.json-string {
+  color: #31a354;
+  text-indent: 1em;
+}
+
+.json-number {
+  color: #f36f6f;
+  text-indent: 1em;
+}
+
+.json-boolean {
+  color: #005cc5;
+  text-indent: 1em;
+}
+
+.json-null {
+  color: #6a737d;
+  text-indent: 1em;
+}
+
+.json-object,
+.json-array {
+  margin-left: 20px;
+}
+
+/* Style the expand/collapse icons */
+.json-toggle::before {
+  content: '\25B6';
+  color: #333;
+  cursor: pointer;
+}
+
+.json-collapsed .json-toggle::before {
+  content: '\25BC';
+}

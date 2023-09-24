@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>SkillJot | Your Skills, Your Story, Your Success!</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="SkillJot" />
+<meta name="author" content="Alen Horvat" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Your Skills, Your Story, Your Success!" />
+<meta property="og:description" content="Your Skills, Your Story, Your Success!" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="SkillJot" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="SkillJot" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Alen Horvat"},"description":"Your Skills, Your Story, Your Success!","headline":"SkillJot","name":"SkillJot","url":"http://localhost:4000/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<meta name="keywords" content="skills,work,education,experience,easy,verifiable" />
+
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="/assets/css/prism.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/gh.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/styles.css" />
+<script src="/assets/js/prism.js"></script>
+
+</head>
+
+<body>
+    <header class="header">
+        <a href="https://github.com/alenhorvat/verifiable-profile-template">jotProfile</a>
+        <a href="https://github.com/alenhorvat/git-recognise">jotSkills</a>
+    </header>
+    <div class="wrapper">
+        <main class="wrapper-main">
+            <div class="main-content">
+                <div style="margin-top: -100px; margin-bottom: 60px;">
+                    <center>
+                        <h1 style="font-size: 72px;">skillJot</h1>
+                        <h1 style="font-size: 36px; margin-top: 20px;">Search</h1>
+                    </center>
+                </div>
+                <center>
+                    <div class="bar">
+                        <input id="github-handler" class="searchbar" type="text" title="Search" placeholder="GitHub username" required>
+                        <a href="#"> </a>
+                    </div>
+                    <div class="buttons">
+                        <button id="search-button" class="button" type="submit">Search</button>
+                    </div>
+                </center>
+            </div>
+        </main>
+    </div>
+    <footer class="wrapper-footer">
+        <div class="footer">
+    <span class="footer-text float-left">This work is licensed under <a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GPLv3</a></span>
+    <span class="footer-text float-right">
+    Last Updated: 2023-09-24 CET. 
+    Version: 1.0
+  </span>
+</div>
+    </footer>
+</body>
+
+<script>
+    // Function to perform the search action
+    function performSearch() {
+        // Get the value from the input field
+        const githubHandler = document.getElementById('github-handler').value;
+
+        // Construct the URL with the query parameter
+        const profileURL = `/profile?id=${githubHandler}`;
+
+        // Navigate to the profile subpage
+        window.location.href = profileURL;
+    }
+
+    // Add an event listener to the "Profile Search" button (click event)
+    document.getElementById('search-button').addEventListener('click', function () {
+        performSearch();
+    });
+
+    // Add an event listener to the input field (Enter key press event)
+    document.getElementById('github-handler').addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+            performSearch();
+        }
+    });
+</script>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include head.html %}
+</head>
+
+<body>
+    <header class="header">
+        <a href="https://github.com/alenhorvat/verifiable-profile-template">jotProfile</a>
+        <a href="https://github.com/alenhorvat/git-recognise">jotSkills</a>
+    </header>
+    <div class="wrapper">
+        <main class="wrapper-main">
+            <div class="main-content">
+                <div style="margin-top: -100px; margin-bottom: 60px;">
+                    <center>
+                        <h1 style="font-size: 72px;">skillJot</h1>
+                        <h1 style="font-size: 36px; margin-top: 20px;">Search</h1>
+                    </center>
+                </div>
+                <center>
+                    <div class="bar">
+                        <input id="github-handler" class="searchbar" type="text" title="Search" placeholder="GitHub username" required>
+                        <a href="#"> </a>
+                    </div>
+                    <div class="buttons">
+                        <button id="search-button" class="button" type="submit">Search</button>
+                    </div>
+                </center>
+            </div>
+        </main>
+    </div>
+    <footer class="wrapper-footer">
+        {% include footer.html %}
+    </footer>
+</body>
+
+<script>
+    // Function to perform the search action
+    function performSearch() {
+        // Get the value from the input field
+        const githubHandler = document.getElementById('github-handler').value;
+
+        // Construct the URL with the query parameter
+        const profileURL = `/profile?id=${githubHandler}`;
+
+        // Navigate to the profile subpage
+        window.location.href = profileURL;
+    }
+
+    // Add an event listener to the "Profile Search" button (click event)
+    document.getElementById('search-button').addEventListener('click', function () {
+        performSearch();
+    });
+
+    // Add an event listener to the input field (Enter key press event)
+    document.getElementById('github-handler').addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+            performSearch();
+        }
+    });
+</script>
+
+</html>
