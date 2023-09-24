@@ -219,22 +219,22 @@ a:hover {
 }
 
 .json-string {
-  color: #31a354;
+  color: white;
   text-indent: 1em;
 }
 
 .json-number {
-  color: #f36f6f;
+  color: white;
   text-indent: 1em;
 }
 
 .json-boolean {
-  color: #005cc5;
+  color: white;
   text-indent: 1em;
 }
 
 .json-null {
-  color: #6a737d;
+  color: white;
   text-indent: 1em;
 }
 
