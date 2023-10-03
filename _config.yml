@@ -1,13 +1,11 @@
 # Site Specific Configuration
 name: SkillJot
-description: Your Skills, Your Story, Your Success!
 url: https://www.skilljot.com
 author: Alen Horvat
 timezone: Europe/Ljubljana
 timezone_short: CET
 
 # Keywords
-keywords: ['skills', 'work', 'education', 'experience', 'easy', verifiable]
 
 # Analytics (Plausible requires sign-up)
 analytics:
@@ -26,7 +24,5 @@ exclude: [ 'README.md', 'COPYING' ]
 
 # Plugins
 plugins:
-  - jekyll-feed
-  - jekyll-paginate-v2
   - jekyll-seo-tag
 
