@@ -9,39 +9,45 @@
 
 <body>
 
-    <!-- Header section -->
-    <div class="header">
-        <!-- Left side of the header -->
-        <div class="header-info">
-            <a style="text-decoration: none;" href="/">
-                <h1>skillJot</h1>
-            </a>
-            <div class="bar">
-                <input id="github-handler" class="searchbar" type="text" title="Search" placeholder="GitHub username"
-                    required>
-                <a href="#"></a>
+    <div id="page-container">
+        <div id="content-wrap">
+            <div class="header">
+                <!-- Left side of the header -->
+                <div class="header-info">
+                    <a style="text-decoration: none;" href="/">
+                        <h1>skillJot</h1>
+                    </a>
+                    <div class="bar">
+                        <input id="github-handler" class="searchbar" type="text" title="Search" placeholder="GitHub username"
+                            required>
+                        <a href="#"></a>
+                    </div>
+                </div>
+                <!-- Right side of the header -->
+                <div class="header-links">
+                    <a href="https://github.com/skilljot/verifiable-profile-template">jotProfile</a>
+                    <a href="https://github.com/skilljot/git-recognise">jotSkills</a>
+                </div>
             </div>
-        </div>
-        <!-- Right side of the header -->
-        <div class="header-links">
-            <a href="https://github.com/alenhorvat/verifiable-profile-template">jotProfile</a>
-            <a href="https://github.com/alenhorvat/git-recognise">jotSkills</a>
+            
+            <br>
+            <hr>
+    
+            <div class="wrapper">
+                <div class="profile-container" id="profile-container">
+                    <!-- JSON data will be inserted here -->
+                </div>
+            </div>
+
+            <footer  id="footer" class="wrapper-footer">
+                {% include footer.html %}
+            </footer>
         </div>
     </div>
-    <br>
-    <hr>
-
-    <div class="wrapper">
-        <div class="profile-container" id="profile-container">
-            <!-- JSON data will be inserted here -->
-        </div>
-    </div>
-
-    <footer class="wrapper-footer">
-        {% include footer.html %}
-    </footer>
     <script src="{{ site.baseurl }}/assets/js/fetch.js"></script>
 
 </body>
 
 </html>
+
+

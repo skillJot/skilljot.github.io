@@ -5,11 +5,9 @@
     <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>SkillJot: Community-Driven Recognition & Developer Skill Acknowledgment</title>
-<meta name="description" content="SkillJot fosters open and transparent community-driven recognition of developer contributions, skills, and project management, worldwide. Explore transparent contribution tracking, Git repository skill records, and professional development opportunities.">
 <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>SkillJot | Your Skills, Your Story, Your Success!</title>
-<meta name="generator" content="Jekyll v4.2.2" />
+<meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="SkillJot" />
 <meta name="author" content="Alen Horvat" />
 <meta property="og:locale" content="en_US" />
@@ -26,6 +24,8 @@
 <!-- End Jekyll SEO tag -->
 
 
+<meta name="keywords" content="skills,work,education,experience,easy,verifiable" />
+
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" href="/favicon.ico"/>
 <link rel="stylesheet" type="text/css" href="/assets/css/prism.css" />
@@ -36,39 +36,41 @@
 </head>
 
 <body>
-    <header class="header">
-        <a href="https://github.com/alenhorvat/verifiable-profile-template">jotProfile</a>
-        <a href="https://github.com/alenhorvat/git-recognise">jotSkills</a>
-    </header>
-    <div class="wrapper">
-        <main class="wrapper-main">
-            <div class="main-content">
-                <div style="margin-top: -100px; margin-bottom: 60px;">
-                    <center>
-                        <h1 style="font-size: 72px;">skillJot</h1>
-                    </center>
+    <div id="page-container">
+        <div id="content-wrap">
+            <header class="header-default">
+                <a href="https://github.com/skillJot/verifiable-profile-template">jotProfile</a>
+                <a href="https://github.com/skilljot/git-recognise">jotSkills</a>
+            </header>
+            
+             
+            <div class="main-content-1">
+                
+                <h1 class="title-default" style="font-size: 72px ">skillJot</h1>
+             
+                
+                <div class="bar">
+                    <input id="github-handler" class="searchbar" type="text" title="Search" placeholder="GitHub username" required>
+                    <a href="#"> </a>
                 </div>
-                <center>
-                    <div class="bar">
-                        <input id="github-handler" class="searchbar" type="text" title="Search" placeholder="GitHub username" required>
-                        <a href="#"> </a>
-                    </div>
-                    <div class="buttons">
-                        <button id="search-button" class="button" type="submit">Search</button>
-                    </div>
-                </center>
+                <div class="buttons">
+                    <button id="search-button" class="button" type="submit">Search</button>
+                </div>
             </div>
-        </main>
-    </div>
-    <footer class="wrapper-footer">
-        <div class="footer">
-    <span class="footer-text float-left">This work is licensed under <a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GPLv3</a></span>
-    <span class="footer-text float-right">
-    Last Updated: 2023-10-03 CET. 
-    Version: 1.0
-  </span>
+
+            <footer id="footer" >
+                <div class="footer-container">
+    <span class="footer-text ">This work is licensed under <a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GPLv3</a></span>
+    <span class="footer-text ">
+        Last Updated: 2023-10-04 CET. 
+        Version: 1.0
+    </span>
 </div>
-    </footer>
+            </footer>
+        </div>
+
+    </div>
+  
 </body>
 
 <script>
@@ -95,6 +97,8 @@
             // Prevent the default form submission behavior
             event.preventDefault();
             performSearch();
+        }else{
+
         }
     });
 </script>

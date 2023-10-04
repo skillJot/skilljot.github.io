@@ -6,33 +6,35 @@
 </head>
 
 <body>
-    <header class="header">
-        <a href="https://github.com/alenhorvat/verifiable-profile-template">jotProfile</a>
-        <a href="https://github.com/alenhorvat/git-recognise">jotSkills</a>
-    </header>
-    <div class="wrapper">
-        <main class="wrapper-main">
-            <div class="main-content">
-                <div style="margin-top: -100px; margin-bottom: 60px;">
-                    <center>
-                        <h1 style="font-size: 72px;">skillJot</h1>
-                    </center>
+    <div id="page-container">
+        <div id="content-wrap">
+            <header class="header-default">
+                <a href="https://github.com/skillJot/verifiable-profile-template">jotProfile</a>
+                <a href="https://github.com/skilljot/git-recognise">jotSkills</a>
+            </header>
+            
+             
+            <div class="main-content-1">
+                
+                <h1 class="title-default" style="font-size: 72px ">skillJot</h1>
+             
+                
+                <div class="bar">
+                    <input id="github-handler" class="searchbar" type="text" title="Search" placeholder="GitHub username" required>
+                    <a href="#"> </a>
                 </div>
-                <center>
-                    <div class="bar">
-                        <input id="github-handler" class="searchbar" type="text" title="Search" placeholder="GitHub username" required>
-                        <a href="#"> </a>
-                    </div>
-                    <div class="buttons">
-                        <button id="search-button" class="button" type="submit">Search</button>
-                    </div>
-                </center>
+                <div class="buttons">
+                    <button id="search-button" class="button" type="submit">Search</button>
+                </div>
             </div>
-        </main>
+
+            <footer id="footer" >
+                {% include footer.html %}
+            </footer>
+        </div>
+
     </div>
-    <footer class="wrapper-footer">
-        {% include footer.html %}
-    </footer>
+  
 </body>
 
 <script>
@@ -59,6 +61,8 @@
             // Prevent the default form submission behavior
             event.preventDefault();
             performSearch();
+        }else{
+
         }
     });
 </script>

@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   const urlParams = new URLSearchParams(window.location.search);
 
   // Get the value of the 'id' query parameter
-  const githubHandler = urlParams.get('id');
+  const githubHandler = urlParams.get('id').toLowerCase();
   let userProfile = {
   }
 
@@ -106,8 +106,9 @@ document.addEventListener('DOMContentLoaded', async function () {
     // Handle the error here
     console.error('Error fetching profile data:', error);
     userProfile = {
-      "Error": `Profile '${githubHandler}' MUST jot its profile.`
     }
+    // Render the JSON data
+    insertElementWithLink(githubHandler);
   }
 
   // Render the profile data as HTML (replace with your desired HTML structure)
@@ -115,7 +116,6 @@ document.addEventListener('DOMContentLoaded', async function () {
   // profileContainer.innerHTML = `
   //     <pre>${JSON.stringify(userProfile, null, 2)}</pre>
   //   `;
-  console.log(userProfile)
 
   // Render the JSON data
   const jsonContainer = document.getElementById('profile-container');
@@ -130,6 +130,31 @@ document.addEventListener('DOMContentLoaded', async function () {
     }
   });
 });
+
+function insertElementWithLink(githubHandler) {
+  // Create a <div> element for the text
+  const newElement = document.createElement("div");
+
+  // Set the text content of the new element
+  newElement.textContent = `Seems like I cannot find '${githubHandler}'.`;
+
+  // Create a <a> element for the link
+  const linkElement = document.createElement("a");
+  linkElement.textContent = "Jot your profile today!";
+  linkElement.href = `https://github.com/skilljot/verifiable-profile-template`;
+
+  // Append the link element to the new element
+  newElement.appendChild(linkElement);
+
+  // Get the profile-container element
+  const profileContainer = document.getElementById("profile-container");
+
+  // Append the new element to the profile-container
+  profileContainer.appendChild(newElement);
+}
+
+// Call the function with the GitHub handler
+
 
 
 // Function to render JSON data recursively

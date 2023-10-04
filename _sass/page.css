@@ -1,0 +1,151 @@
+/* Style inspiration and settings adapted from https://github.com/jgthms/web-design-in-4-minutes*/
+/* Base */
+html {
+  font-size: 18px;
+}
+
+/* 01 Font family */
+body {
+  font-family: "Courier New", "Helvetica", sans-serif;
+  min-height: 100vh;
+  height: 100vh;
+}
+
+/* 03 Spacing */
+.padded {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  line-height: 30px;
+}
+
+.main-content-1 {
+  padding-top: 5rem;
+  margin-bottom: 4rem;
+  line-height: 30px;
+  text-align: center;
+  flex: 1 1;
+}
+
+div.main-content h2 {
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+header h1, h5 {
+  display: inline;
+}
+
+/* 04 Color and contrast */
+body {
+  color: #c5ccce;
+  background-color: #282f3a;
+}
+
+h1,
+h2,
+strong {
+  color: #dcdede;
+}
+
+header h5 {
+  font-weight: lighter;
+}
+
+/* 05 Balance */
+code {
+  padding: 2px 4px;
+  vertical-align: text-bottom;
+}
+
+/* 06 Primary color */
+a {
+  color: #7e92a2;
+}
+
+/* 07 Secondary colors */
+h1,
+h2,
+strong {
+  font-weight: 500;
+}
+
+.json-object {
+  text-align: left;
+  margin-left: 0px;
+}
+
+.clickable {
+  color: white;
+  text-indent: 1em;
+  font-weight: 500;
+  word-break: break-all;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.bar {
+  margin-top: 60px;
+}
+
+.header-info .bar {
+  margin-top: 0px;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-content {
+    width: 100%;
+    padding-top: 2rem;
+  }
+  .title-default {
+    font-size: 54px !important;
+    text-align: center;
+    align-items: center;
+  }
+  .bar {
+    width: 100%;
+    max-width: 375px;
+    margin: 0, 1rem;
+    border-radius: 30px;
+    border: 1px solid #dcdcdc;
+  }
+  .searchbar {
+    height: 45px;
+    border: none;
+    width: 100%;
+    max-width: 300px;
+    font-size: 16px;
+    color: white;
+    outline: none;
+    background-color: #282f3a;
+    margin: 0 2rem;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .bar {
+    width: 100%;
+    max-width: 275px;
+    margin: 0, 1rem;
+    border-radius: 30px;
+    border: 1px solid #dcdcdc;
+  }
+  .searchbar {
+    height: 45px;
+    border: none;
+    width: 100%;
+    max-width: 220px;
+    font-size: 16px;
+    color: white;
+    outline: none;
+    background-color: #282f3a;
+    margin: 0 2rem;
+  }
+}/*# sourceMappingURL=page.css.map */

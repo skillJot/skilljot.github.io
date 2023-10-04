@@ -1,0 +1,11 @@
+@media only screen and (max-width: 479px) {
+  .mobile-hide {
+    display: none !important;
+  }
+  .footer-text {
+    float: left !important;
+  }
+  html {
+    margin: 1em !important;
+  }
+}/*# sourceMappingURL=mobile.css.map */

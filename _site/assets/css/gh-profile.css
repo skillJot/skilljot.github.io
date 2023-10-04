@@ -83,9 +83,15 @@
 
 .wrapper {
   margin-top: 20px;
-  /* Adjust margin as needed */
+  display: flex;
   justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  /* Adjust margin as needed
+  justify-content: center;*/
 }
+
+.profile-container {}
 
 /* Reset default styles */
 body {
@@ -238,7 +244,11 @@ a:hover {
   text-indent: 1em;
 }
 
-.json-object,
+.json-object {
+  margin-left: 20px;
+  text-align: left;
+}
+
 .json-array {
   margin-left: 20px;
 }

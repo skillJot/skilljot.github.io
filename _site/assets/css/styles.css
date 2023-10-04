@@ -59,22 +59,19 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-.wrapper-main, .wrapper-header, .wrapper-footer {
+.wrapper-main, .wrapper-header {
   width: 100%;
   margin: 0 auto;
   max-width: 900px;
 }
 
-/* Sticky Footer */
 .wrapper {
-  min-height: calc(100vh - 40px);
+  flex: 1 1;
+  margin-bottom: 2rem;
+  text-align: center;
+  word-wrap: break-word;
 }
 
-.wrapper-footer {
-  height: 40px;
-}
-
-/* End Sticky Footer */
 /* Style inspiration and settings adapted from https://github.com/jgthms/web-design-in-4-minutes*/
 /* Base */
 html {
@@ -84,6 +81,8 @@ html {
 /* 01 Font family */
 body {
   font-family: "Courier New", "Helvetica", sans-serif;
+  min-height: 100vh;
+  height: 100vh;
 }
 
 /* 03 Spacing */
@@ -93,10 +92,12 @@ body {
   line-height: 30px;
 }
 
-.main-content {
-  padding-top: 30px;
-  padding-bottom: 30px;
+.main-content-1 {
+  padding-top: 5rem;
+  margin-bottom: 4rem;
   line-height: 30px;
+  text-align: center;
+  flex: 1 1;
 }
 
 div.main-content h2 {
@@ -142,12 +143,118 @@ strong {
   font-weight: 500;
 }
 
-.footer-text {
-  display: block;
-  position: relative;
-  font-size: 14px;
+.json-object {
+  text-align: left;
+  margin-left: 0px;
 }
 
+.clickable {
+  color: white;
+  text-indent: 1em;
+  font-weight: 500;
+  word-break: break-all;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.bar {
+  margin-top: 60px;
+}
+
+.header-info .bar {
+  margin-top: 0px;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-content {
+    width: 100%;
+    padding-top: 2rem;
+  }
+  .title-default {
+    font-size: 54px !important;
+    text-align: center;
+    align-items: center;
+  }
+  .bar {
+    width: 100%;
+    max-width: 375px;
+    margin: 0, 1rem;
+    border-radius: 30px;
+    border: 1px solid #dcdcdc;
+  }
+  .searchbar {
+    height: 45px;
+    border: none;
+    width: 100%;
+    max-width: 300px;
+    font-size: 16px;
+    color: white;
+    outline: none;
+    background-color: #282f3a;
+    margin: 0 2rem;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .bar {
+    width: 100%;
+    max-width: 275px;
+    margin: 0, 1rem;
+    border-radius: 30px;
+    border: 1px solid #dcdcdc;
+  }
+  .searchbar {
+    height: 45px;
+    border: none;
+    width: 100%;
+    max-width: 220px;
+    font-size: 16px;
+    color: white;
+    outline: none;
+    background-color: #282f3a;
+    margin: 0 2rem;
+  }
+}
+#footer {
+  /*position: absolute;
+  bottom:0;
+  width: 100%;*/
+  height: 3rem;
+  margin: 1rem 0px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-text {
+  width: 100%;
+  margin: auto;
+  justify-content: normal;
+  margin: auto;
+  text-align: center;
+  word-break: break-word;
+}
+
+@media only screen and (max-width: 768px) {
+  #footer {
+    height: 4rem;
+    margin: 1rem 0px;
+    font-size: medium;
+  }
+}
+/* PROFILE HTML*/
 .header {
   padding-top: 35px;
 }
@@ -161,6 +268,46 @@ strong {
   padding-right: 3px;
 }
 
+/* DEFAULT HTML */
+.header-default {
+  height: 82px;
+  padding-top: 35px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+}
+
+.header-default nav {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.header-default nav a {
+  padding-right: 3px;
+}
+
+@media only screen and (max-width: 768px) {
+  .header-default {
+    height: 82px;
+    padding-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header {
+    padding-top: 0px;
+  }
+  .header-info a h1 {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center;
+  }
+  .header-links {
+    margin-top: 1.2rem;
+    text-align: center;
+  }
+}
 .float-left {
   float: left;
 }
