@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XWZR16JM9T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XWZR16JM9T');
+    </script>
     {% include head-profile.html %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ajv/8.1.0/ajv7.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.14.1/js-yaml.min.js"></script>
@@ -18,8 +27,8 @@
                         <h1>skillJot</h1>
                     </a>
                     <div class="bar">
-                        <input id="github-handler" class="searchbar" type="text" title="Search" placeholder="GitHub username"
-                            required>
+                        <input id="github-handler" class="searchbar" type="text" title="Search"
+                            placeholder="GitHub username" required>
                         <a href="#"></a>
                     </div>
                 </div>
@@ -29,17 +38,17 @@
                     <a href="https://github.com/skilljot/git-recognise">jotSkills</a>
                 </div>
             </div>
-            
+
             <br>
             <hr>
-    
+
             <div class="wrapper">
                 <div class="profile-container" id="profile-container">
                     <!-- JSON data will be inserted here -->
                 </div>
             </div>
 
-            <footer  id="footer" class="wrapper-footer">
+            <footer id="footer" class="wrapper-footer">
                 {% include footer.html %}
             </footer>
         </div>
@@ -49,5 +58,3 @@
 </body>
 
 </html>
-
-

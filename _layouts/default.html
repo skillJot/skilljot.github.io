@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XWZR16JM9T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XWZR16JM9T');
+    </script>
     {% include head.html %}
 </head>
 
@@ -12,15 +21,16 @@
                 <a href="https://github.com/skillJot/verifiable-profile-template">jotProfile</a>
                 <a href="https://github.com/skilljot/git-recognise">jotSkills</a>
             </header>
-            
-             
+
+
             <div class="main-content-1">
-                
+
                 <h1 class="title-default" style="font-size: 72px ">skillJot</h1>
-             
-                
+
+
                 <div class="bar">
-                    <input id="github-handler" class="searchbar" type="text" title="Search" placeholder="GitHub username" required>
+                    <input id="github-handler" class="searchbar" type="text" title="Search"
+                        placeholder="GitHub username" required>
                     <a href="#"> </a>
                 </div>
                 <div class="buttons">
@@ -28,13 +38,13 @@
                 </div>
             </div>
 
-            <footer id="footer" >
+            <footer id="footer">
                 {% include footer.html %}
             </footer>
         </div>
 
     </div>
-  
+
 </body>
 
 <script>
@@ -61,7 +71,7 @@
             // Prevent the default form submission behavior
             event.preventDefault();
             performSearch();
-        }else{
+        } else {
 
         }
     });
